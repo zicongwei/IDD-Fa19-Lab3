@@ -48,17 +48,23 @@ When the stimulus increases, the resistance decreases linearly.
  
 ### 1. Reading and writing values to the Arduino EEPROM
 
-**a. Does it matter what actions are assigned to which state? Why?**
+**a. Does it matter what actions are assigned to which state? Why?**  
 
-**b. Why is the code here all in the setup() functions and not in the loop() functions?**
 
-**c. How many byte-sized data samples can you store on the Atmega328?**
+**b. Why is the code here all in the setup() functions and not in the loop() functions?**  
+because we only want to do the action once, instead of constantly reading, wriitng, and clearing etc. 
 
-**d. How would you get analog data from the Arduino analog pins to be byte-sized? How about analog data from the I2C devices?**
+**c. How many byte-sized data samples can you store on the Atmega328?**  
+1024 bytes
 
-**e. Alternately, how would we store the data if it were bigger than a byte? (hint: take a look at the [EEPROMPut](https://www.arduino.cc/en/Reference/EEPROMPut) example)**
+**d. How would you get analog data from the Arduino analog pins to be byte-sized? How about analog data from the I2C devices?**  
+We can map the 10 bits to 8 bits by using linear equations. For I2C devices, we can also use the same byte-sized mapping.
 
-**Upload your modified code that takes in analog values from your sensors and prints them back out to the Arduino Serial Monitor.**
+**e. Alternately, how would we store the data if it were bigger than a byte? (hint: take a look at the [EEPROMPut](https://www.arduino.cc/en/Reference/EEPROMPut) example)**  
+If it is bigger than a byte, the extra parts will be written to the following addresses. 
+
+**Upload your modified code that takes in analog values from your sensors and prints them back out to the Arduino Serial Monitor.**  
+[https://github.com/zicongwei/IDD-Fa19-Lab3/blob/master/state2.ino.ino] 
 
 ### 2. Design your logger
  
