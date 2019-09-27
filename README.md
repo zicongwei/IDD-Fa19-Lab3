@@ -1,41 +1,44 @@
 # Data Logger (and using cool sensors!)
 
-*A lab report by John Q. Student.*
-
-## In The Report
-
-Include your responses to the bold questions on your own fork of [this lab report template](https://github.com/FAR-Lab/IDD-Fa18-Lab2). Include snippets of code that explain what you did. Deliverables are due next Tuesday. Post your lab reports as README.md pages on your GitHub, and post a link to that on your main class hub page.
-
-For this lab, we will be experimenting with a variety of sensors, sending the data to the Arduino serial monitor, writing data to the EEPROM of the Arduino, and then playing the data back.
+*A lab report by Irene Wei. Student.*
 
 ## Part A.  Writing to the Serial Monitor
  
-**a. Based on the readings from the serial monitor, what is the range of the analog values being read?**
+**a. Based on the readings from the serial monitor, what is the range of the analog values being read?**  
+0~1023
  
-**b. How many bits of resolution does the analog to digital converter (ADC) on the Arduino have?**
+**b. How many bits of resolution does the analog to digital converter (ADC) on the Arduino have?**  
+10 bits
 
 ## Part B. RGB LED
 
-**How might you use this with only the parts in your kit? Show us your solution.**
+**How might you use this with only the parts in your kit? Show us your solution.** . 
+Use the RGB with different resistors can light up different colors. 
 
 ## Part C. Voltage Varying Sensors 
  
 ### 1. FSR, Flex Sensor, Photo cell, Softpot
 
-**a. What voltage values do you see from your force sensor?**
+**a. What voltage values do you see from your force sensor?**  
+0~1023, which means 0~5v
 
-**b. What kind of relationship does the voltage have as a function of the force applied? (e.g., linear?)**
+**b. What kind of relationship does the voltage have as a function of the force applied? (e.g., linear?)**  
+It is linear relationship between the force and the voltage.
 
-**c. Can you change the LED fading code values so that you get the full range of output voltages from the LED when using your FSR?**
+**c. Can you change the LED fading code values so that you get the full range of output voltages from the LED when using your FSR?**  
+Yes. Map the values that FST read to the LED.
+`outputLED = map(inputFSR, 0, 1023, 0, 255);`
 
-**d. What resistance do you need to have in series to get a reasonable range of voltages from each sensor?**
+**d. What resistance do you need to have in series to get a reasonable range of voltages from each sensor?**  
+10k Ohm.
 
-**e. What kind of relationship does the resistance have as a function of stimulus? (e.g., linear?)**
+**e. What kind of relationship does the resistance have as a function of stimulus? (e.g., linear?)**  
+When the stimulus increases, the resistance decreases linearly. 
 
 ### 2. Accelerometer
  
 **a. Include your accelerometer read-out code in your write-up.**
-
+[https://github.com/zicongwei/IDD-Fa19-Lab3/blob/master/lab3_partD.ino]
 
 ## Optional. Graphic Display
 
