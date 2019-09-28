@@ -49,7 +49,7 @@ When the stimulus increases, the resistance decreases linearly.
 ### 1. Reading and writing values to the Arduino EEPROM
 
 **a. Does it matter what actions are assigned to which state? Why?**  
-
+Yes, because we cant do 'read' after 'clear, for the actions of read, clear, and write.  
 
 **b. Why is the code here all in the setup() functions and not in the loop() functions?**  
 because we only want to do the action once, instead of constantly reading, wriitng, and clearing etc. 
@@ -69,7 +69,9 @@ If it is bigger than a byte, the extra parts will be written to the following ad
 ### 2. Design your logger
  
 **a. Insert here a copy of your final state diagram.**
+[https://github.com/zicongwei/IDD-Fa19-Lab3/blob/master/Screen%20Shot%202019-09-27%20at%2011.38.59%20PM.png]
 
 ### 3. Create your data logger!
  
 **a. Record and upload a short demo video of your logger in action.**
+[https://youtu.be/s0KFSCcnupw]
