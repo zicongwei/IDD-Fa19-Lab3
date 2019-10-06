@@ -23,7 +23,7 @@ Use the RGB with different resistors can light up different colors.
 0~1023, which means 0~5v
 
 **b. What kind of relationship does the voltage have as a function of the force applied? (e.g., linear?)**  
-It is linear relationship between the force and the voltage.
+It is logrithmatic relationship between the force and the voltage.
 
 **c. Can you change the LED fading code values so that you get the full range of output voltages from the LED when using your FSR?**  
 Yes. Map the values that FST read to the LED.
@@ -33,7 +33,8 @@ Yes. Map the values that FST read to the LED.
 10k Ohm.
 
 **e. What kind of relationship does the resistance have as a function of stimulus? (e.g., linear?)**  
-When the stimulus increases, the resistance decreases linearly. 
+soft pot and flex sensor - linear
+photocell and force sensor - logrithmatic
 
 ### 2. Accelerometer
  
@@ -64,14 +65,14 @@ We can map the 10 bits to 8 bits by using linear equations. For I2C devices, we 
 If it is bigger than a byte, the extra parts will be written to the following addresses. 
 
 **Upload your modified code that takes in analog values from your sensors and prints them back out to the Arduino Serial Monitor.**  
-[https://github.com/zicongwei/IDD-Fa19-Lab3/blob/master/state2.ino.ino] 
+[code](https://github.com/zicongwei/IDD-Fa19-Lab3/blob/master/state2.ino.ino)
 
 ### 2. Design your logger
  
 **a. Insert here a copy of your final state diagram.**
-[https://github.com/zicongwei/IDD-Fa19-Lab3/blob/master/Screen%20Shot%202019-09-27%20at%2011.38.59%20PM.png]
+![Diagram](https://github.com/zicongwei/IDD-Fa19-Lab3/blob/master/Screen%20Shot%202019-09-27%20at%2011.38.59%20PM.png)
 
 ### 3. Create your data logger!
  
-**a. Record and upload a short demo video of your logger in action.**
-[https://youtu.be/s0KFSCcnupw]
+**a. Record and upload a short demo video of your logger in action.**  
+[video](https://youtu.be/s0KFSCcnupw)
